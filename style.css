@@ -17,7 +17,7 @@ body {
 }
 
 .welcome-tab {
-    height: 300px;
+    height: 350px;
     max-width: 1000px;
     margin: 0 auto;
     box-shadow: 20px 20px 40px rgba(10, 150, 78, 0.1);
@@ -28,7 +28,7 @@ body {
 
 .welcome-tab h2{
     padding-top: 55px;
-    font-size: 35px;
+    font-size: 30px;
     color: #0a964e;
 }
 
@@ -36,13 +36,23 @@ body {
     display: inline;
     float: left;
     position: absolute;
-    top: 19%;
-    left: 37%;
-    color: #0a964e;
+    top: 17%;
+    left: 38%;
 }
 
 .welcome-tab p{
     font-size: 17px;
-    padding-top: 23px;
+    padding-top: 30px;
+}
+
+.exchange-button{
+    margin-top: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0a964e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
