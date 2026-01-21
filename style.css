@@ -17,18 +17,18 @@ body {
 }
 
 .welcome-tab {
-    height: 500px;
+    height: 300px;
     max-width: 1000px;
     margin: 0 auto;
     box-shadow: 20px 20px 40px rgba(10, 150, 78, 0.1);
     border-radius: 10px;
     overflow: hidden;
-    padding-top: 50px;
     text-align: center;
 }
 
 .welcome-tab h2{
-    font-size: clamp(2rem, 2.5vw, 2.5rem);
+    padding-top: 55px;
+    font-size: 35px;
     color: #0a964e;
 }
 
@@ -37,7 +37,12 @@ body {
     float: left;
     position: absolute;
     top: 19%;
-    left: 36%;
+    left: 37%;
     color: #0a964e;
+}
+
+.welcome-tab p{
+    font-size: 17px;
+    padding-top: 23px;
 }
 
