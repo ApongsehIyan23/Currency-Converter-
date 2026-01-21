@@ -15,3 +15,20 @@ body {
     list-style: none;
     font-family: 'Raleway', sans-serif;
 }
+
+.welcome-tab {
+    height: 500px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 20px 20px 40px rgba(10, 150, 78, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.welcome-tab h2{
+    font-size: clamp(2rem, 1.5vw, 1.5rem);
+    color: #0a964e;
+}
+
