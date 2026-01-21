@@ -28,7 +28,16 @@ body {
 }
 
 .welcome-tab h2{
-    font-size: clamp(2rem, 1.5vw, 1.5rem);
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+    color: #0a964e;
+}
+
+.welcome-tab .fa{
+    display: inline;
+    float: left;
+    position: absolute;
+    top: 19%;
+    left: 36%;
     color: #0a964e;
 }
 
