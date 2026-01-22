@@ -31,8 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-// 1. Your Dictionary (Mapping)
+// Exchange Rates
 const exchangeRates = {
     "xaf-rates": { RWF: 2.11, USD: 0.0016, EUR: 0.0015, GBP: 0.0013, JPY: 0.25, AUD: 0.0025 },
     "rwf-rates": { XAF: 0.47, USD: 0.00077, EUR: 0.00072, GBP: 0.00062, JPY: 0.12, AUD: 0.0012 },
@@ -46,23 +45,22 @@ const exchangeRates = {
 const selectElement = document.getElementById('base-currency');
 const displayArea = document.getElementById('rates-display');
 
-// 2. Listen for the selection change
 selectElement.addEventListener('change', function() {
-    const selectedOption = this.options[this.selectedIndex];
-    const rateKey = selectedOption.dataset.convertionRate;
+    const selectedOption = selectElement.querySelector('option:checked');
+    
+    // Get the key and value using getAttribute
+    const rateKey = selectedOption.getAttribute('data-convertion-rate');
+    const baseSymbol = selectedOption.getAttribute('value');
+    
     const rates = exchangeRates[rateKey];
-    const baseSymbol = this.value;
 
-    // 3. Clear the display area first
     displayArea.innerHTML = `<h4>Current conversion for 1 ${baseSymbol}:</h4><hr>`;
 
-    // 4. Create the list of rates
     if (rates) {
         const list = document.createElement('ul');
         list.style.listStyle = "none";
         list.style.padding = "10px 0";
 
-        // Loop through each currency in the sub-dictionary
         for (const [targetCurrency, value] of Object.entries(rates)) {
             const listItem = document.createElement('li');
             listItem.style.padding = "5px 0";

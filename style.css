@@ -121,7 +121,7 @@ body {
     margin-bottom: 15px;
 }
 
-#base-currency {
+#base-currency, #target-currency {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;

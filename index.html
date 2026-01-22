@@ -35,6 +35,25 @@
             <option value="AUD" data-convertion-rate="aud-rates">AUD - Australian Dollar</option>      
         </select>
 
+        <p>Choose the Target Currency</p>
+        <select id="target-currency">
+            <option value="XAF" data-convertion-rate="xaf-rates">XAF - Central African Francs</option>
+            <option value="RWF" data-convertion-rate="rwf-rates">RWF - Rwandan Francs</option>
+            <option value="USD" data-convertion-rate="usd-rates">USD - United States Dollar</option>
+            <option value="EUR" data-convertion-rate="eur-rates">EUR - Euro</option>
+            <option value="GBP" data-convertion-rate="gbp-rates">GBP - British Pound</option>
+            <option value="JPY" data-convertion-rate="jpy-rates">JPY - Japanese Yen</option>
+            <option value="AUD" data-convertion-rate="aud-rates">AUD - Australian Dollar</option>      
+        </select>
+
+        <div id="amount-area" style="margin-top: 20px;">
+        <p>Enter Amount:</p>
+        <input type="number" id="amount-input" placeholder="0.00" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+    </div>
+
+    <button id="convert-btn" style="margin-top: 20px; padding: 10px 20px; background-color: #0a964e; color: white; border: none; border-radius: 5px; cursor: pointer; width: 100%;">
+    Convert
+</button>
         <div id="rates-display" style="margin-top: 20px; text-align: left;"></div>
 </div>
     </div>
