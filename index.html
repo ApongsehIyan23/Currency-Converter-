@@ -5,8 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>
-            Currency Converter Web
+        <title>Currency Converter Web
         </title>
     </head>
     <body>
@@ -18,5 +17,23 @@
             </p>
             <button class="exchange-button" data-modal-target="ExchangeModal">Exchange!</button>
         </div>
+
+        <div class="modal" id="ExchangeModal">
+    <div class="modal-container">
+        <div class="modal-close" data-modal-close="ExchangeModal">
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </div>
+
+        <p>Choose the Base Currency</p>
+        <select id="base-currency">
+            <option value="USD">USD - United States Dollar</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="GBP">GBP - British Pound</option>
+            <option value="JPY">JPY - Japanese Yen</option>
+            <option value="AUD">AUD - Australian Dollar</option>      
+        </select>
+    </div>
+</div>
+        <script src="script.js"></script>
     </body>
 </html>

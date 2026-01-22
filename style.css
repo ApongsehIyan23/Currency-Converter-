@@ -22,7 +22,6 @@ body {
     margin: 0 auto;
     box-shadow: 20px 20px 40px rgba(10, 150, 78, 0.1);
     border-radius: 10px;
-    overflow: hidden;
     text-align: center;
 }
 
@@ -56,3 +55,76 @@ body {
     cursor: pointer;
 }
 
+/* The dark overlay */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;        /* Hidden by default */
+    align-items: center;  /* Vertical center */
+    justify-content: center; /* Horizontal center */
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Toggle this with JavaScript */
+.modal.active {
+    display: flex;        /* Show the box */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* The actual white box */
+.modal-container {
+    background: white;
+    width: 90%;
+    max-width: 500px;     /* Better size for a currency selector */
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;   /* Important for positioning the close button */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    
+    /* Animation: Slide up effect */
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-container {
+    transform: translateY(0);
+}
+
+/* The Close Button "X" */
+.modal-close {
+    position: absolute;   /* Absolute relative to modal-container */
+    top: 15px;
+    right: 15px;
+    color: #0a964e;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.modal-close:hover {
+    transform: scale(1.1);
+    color: #087a3f;
+}
+
+/* Styles for the content inside */
+.modal-container p {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#base-currency {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
