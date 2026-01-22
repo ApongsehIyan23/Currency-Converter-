@@ -71,3 +71,33 @@ selectElement.addEventListener('change', function() {
         displayArea.appendChild(list);
     }
 });
+
+const amountInput = document.getElementById('amount-input');
+const convertBtn = document.getElementById('convert-btn');
+const targetSelect = document.getElementById('target-currency');
+const baseSelect = document.getElementById('base-currency');
+
+convertBtn.addEventListener('click', function() {
+    const baseOption = baseSelect.querySelector('option:checked');
+    const baseKey = baseOption.getAttribute('data-convertion-rate');
+    const baseSymbol = baseOption.getAttribute('value');
+
+    const targetOption = targetSelect.querySelector('option:checked');
+    const targetSymbol = targetOption.getAttribute('value');
+
+    const amount = amountInput.value;
+    const rates = exchangeRates[baseKey];
+
+    if (amount && rates) {
+        const specificRate = rates[targetSymbol];
+        const result = (amount * specificRate).toLocaleString();
+
+        const resultDiv = document.createElement('div');
+        resultDiv.innerHTML = `
+            <div style="background: #e7f5ed; padding: 10px; border: 1px solid #0a964e; margin-bottom: 15px;">
+                <strong>Result:</strong> ${amount} ${baseSymbol} = ${result} ${targetSymbol}
+            </div>
+        `;
+        displayArea.prepend(resultDiv); 
+    }
+});
